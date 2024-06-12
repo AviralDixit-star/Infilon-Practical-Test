@@ -12,6 +12,7 @@ type Person struct {
 	ZipCode     string
 }
 
+//secondary port
 type PersonRepository interface {
 	FindByID(ID int) (*Person, error)
 }

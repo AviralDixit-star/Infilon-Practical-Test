@@ -6,6 +6,7 @@ import (
 	"github.com/AviralDixit-star/Infilon-Practical-Test/domain"
 )
 
+//Primary Port
 type PersonService interface {
 	GetPersonByID(id int) (*domain.Person, error)
 }
@@ -16,6 +17,7 @@ type DefaultPersonService struct {
 	Repo domain.PersonRepository
 }
 
+//receiver function
 func (d DefaultPersonService) GetPersonByID(id int) (*domain.Person, error) {
 	person, err := d.Repo.FindByID(id)
 	if err != nil {
